@@ -1,0 +1,14 @@
+# yarn
+/node_modules
+yarn.lock
+
+#vscode
+.vscode/
+
+#other
+/dist
+
+#terraform
+/.terraform
+*.tfstate
+*.tfstate.backup
