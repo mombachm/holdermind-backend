@@ -12,9 +12,11 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "pg": "^8.3.0"
+    "pg": "^8.3.0",
+    "sequelize": "^6.3.1"
   },
   "devDependencies": {
+    "@types/sequelize": "^4.28.9",
     "nodemon": "^1.19.2",
     "ts-node": "^8.3.0",
     "tslint": "^5.20.0",
@@ -22,7 +24,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon -L",
+    "dev": "brew services start postgresql && export DATABASE_URL=postgres://localhost:5432/holdermind && nodemon -L",
     "start": "node ./dist/Server.js",
     "lint": "tslint  -p tsconfig.json ./src/**/*.ts"
   }
