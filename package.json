@@ -20,6 +20,7 @@
     "tslint": "^5.20.0"
   },
   "scripts": {
+    "build": "tsc",
     "dev": "nodemon -L",
     "start": "node ./dist/Server.js",
     "lint": "tslint  -p tsconfig.json ./src/**/*.ts"
