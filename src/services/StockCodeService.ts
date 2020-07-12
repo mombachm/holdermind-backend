@@ -7,7 +7,7 @@ export class StockCodeService {
   }
 
   public static async createUserStockCode(stockCode: string): Promise<any> {
-    const stockCodeModel = new StockCodeModel({code: stockCode});
+    const stockCodeModel = new StockCodeModel({code: stockCode.toUpperCase()});
     return await stockCodeModel.save();
   }
 
